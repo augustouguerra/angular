@@ -1,0 +1,10 @@
+<app-game-control (invertalFired)="onIntervalFired($event)"></app-game-control>
+<div>
+    <div>
+        <app-odd *ngFor="let odd of oddNumbers" [number]="odd">
+        </app-odd>
+    </div>
+    <div>
+        <app-even *ngFor="let even of evenNumbers" [number]="even"></app-even>
+    </div>
+</div>

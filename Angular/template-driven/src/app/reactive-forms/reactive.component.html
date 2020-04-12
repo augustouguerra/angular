@@ -1,0 +1,20 @@
+<!-- 
+    [formGroup] informs to angular that use our own fromGroup
+-->
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="">Project Name</label>
+        <input type="text" class="form-control" formControlName="projectName">
+    </div>
+    <div>
+        <label for="">Email</label>
+        <input type="text" class="form-control" formControlName="email">
+    </div>
+    <div>
+        <label for="">Project Status</label>
+        <select formControlName="status" id="" class="form-control">
+            <option [value]="s" *ngFor="let s of statusArray">{{ s }}</option>
+        </select>
+    </div>
+    <button>Submit</button>
+</form>

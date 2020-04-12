@@ -1,0 +1,32 @@
+<main *ngIf="showComponent">
+  <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <div>
+      <label for="email">Email</label>
+      <input ngModel class="form-control" type="email" name="email" required email #email="ngModel">
+      <span *ngIf="!email.valid && email.touched">Please enter a email valid!</span>
+    </div>
+    <div>
+      <label for="subscription">Subscription</label>
+      <select name="subscription" id="" class="form-control" #subscription="ngModel" [ngModel]="subscriptionDefault"
+        required>
+        <option value="basic">Basic</option>
+        <option value="advanced">Advanced</option>
+        <option value="pro">Pro</option>
+      </select>
+      <span *ngIf="!subscription.valid && subscription.touched">Please enter a valid subcription!</span>
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" class="form-control" name="password" required ngModel #password="ngModel">
+    </div>
+    <span *ngIf="!password.valid && password.touched">Please enter a valid password!</span>
+    <button class="btn btn-primary" type="submit" [disabled]="form.invalid">Submit</button>
+  </form>
+  <span *ngIf="form.invalid && form.touched">
+    The form is invalid!
+  </span>
+</main>
+
+<app-reactive-form>
+  
+</app-reactive-form>

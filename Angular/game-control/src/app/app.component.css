@@ -1,0 +1,17 @@
+div{
+    display: flex;
+    justify-content: space-between;
+}
+
+div:first-child {
+    background-color: dodgerblue;
+    width: 50½;
+    display: flex;
+    flex-direction: column;
+}
+
+div:last-child {
+    background-color: orangered;
+    width: 50½;
+    flex-direction: column;
+}

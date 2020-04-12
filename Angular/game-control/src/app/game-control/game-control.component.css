@@ -1,0 +1,19 @@
+div {
+    background-color: lightblue;
+    display: flex;
+    justify-content: space-evenly;
+    height: 50px;
+}
+
+#btn1 {
+    background-color: limegreen;
+    width: 50px;
+}
+
+
+#btn2 {
+    background-color: orangered;
+    width: 50px;
+}
+
+
